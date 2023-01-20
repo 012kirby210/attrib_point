@@ -68,7 +68,7 @@ class User
 
     public function setCreatedAt(\DateTimeImmutable $create_at): self
     {
-        $this->create_at = $create_at;
+        $this->created_at = $create_at;
 
         return $this;
     }
