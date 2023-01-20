@@ -24,7 +24,6 @@ class GroupeFixtures extends Fixture implements DependentFixtureInterface
 			$user = $this->getReference(User::class.'-'.$userIndex);
 			$groupe->addUser($user);
 			$manager->persist($groupe);
-			$this->addReference(Groupe::class . '-' . $i, $user);
 		}
         $manager->flush();
     }
