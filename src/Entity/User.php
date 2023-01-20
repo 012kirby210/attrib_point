@@ -114,4 +114,17 @@ class User
 
         return $this;
     }
+
+	public function getTotalPoints(): int
+	{
+		$total = array_reduce( $this->attributions->toArray(),
+			function($carry,$item) { return $item->getPoints() +$carry; },
+			0);
+		return $total;
+	}
+
+	public function __toString(): string
+	{
+		return $this->nom;
+	}
 }

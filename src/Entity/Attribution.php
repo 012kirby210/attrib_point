@@ -75,4 +75,9 @@ class Attribution
 
         return $this;
     }
+
+	public function __toString()
+	{
+		return $this->created_at->format('Y-m-d H:i:s') . ", " .$this->points;
+	}
 }
